@@ -1,0 +1,43 @@
+.social {
+    margin-bottom: 40px;
+}
+
+.social__list {
+    max-height: 36px;
+    display: flex;
+    align-items: center;
+}
+
+.social__item {
+    margin-right: 27px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.social__link {
+    display: block;
+}
+
+.social__icon {
+    fill: #a9acae;
+    transition: .5s;
+    &:hover {
+        fill: #4d8936;
+    }
+}
+
+.social__icon_vk {
+    width: 31px;
+    height: 17px;
+}
+
+.social__icon_git {
+    width: 26px;
+    height: 22px;
+}
+
+.social__icon_in {
+    width: 24px;
+    height: 22px;
+}

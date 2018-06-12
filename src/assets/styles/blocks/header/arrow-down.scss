@@ -1,0 +1,21 @@
+.arrow-down {
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26px;
+    height: 20px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+.down__svg {
+    width: 100%;
+    height: 100%;
+    fill: white;
+}

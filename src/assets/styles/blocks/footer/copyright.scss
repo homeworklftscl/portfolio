@@ -1,0 +1,19 @@
+.copyright__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(108, 156, 90, 0.85);
+    padding: 9px 0;
+}
+
+.copyright {
+    font-size: 0;
+    bottom: 0;
+}
+
+.copyright__text {
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15.76px;
+}
