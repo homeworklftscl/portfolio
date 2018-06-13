@@ -12,14 +12,16 @@
 }
 
 .blog-nav__link {
+    transition: .5s;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     min-height: 42px;
+    font-weight: bold;
     color: #455a64;
     text-decoration: none;
     &:before {
-        transition: .5s;
+        transition: .7s;
         content: "";
         background-color: #6c9c5a;
         bottom: 0%;
@@ -32,7 +34,6 @@
     }
     &:hover {
         color: #6c9c5a;
-        font-weight: 700;
     }
     &:hover:before {
         width: 4px;
