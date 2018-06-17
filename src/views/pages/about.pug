@@ -1,10 +1,86 @@
 extends ../main.layout.pug
 
 block variables
-  - var title = 'Обо мне'
+  - var title = 'Обо мне';
 
 block scripts
   script(src='about.bundle.js')
 
 block content
-  h1 Страничка "Обо Мне"  
+
+  section.about
+    .about__left
+
+      .about__left-title
+        .title
+          .block-title Обо мне
+          +icon('about_header', 'about-header__svg')
+        hr.line-title
+          
+        
+        
+      .about__left-content
+        .user-description
+          .user-description__image
+            img.user-description__avatar(src='assets/images/artem.jpg')
+          .user-description__data
+            .user-description__title
+              .block-subtitle Кто я 
+              hr.line-title
+            .user-description__text.text-content
+              p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              br
+              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+    .about__right
+
+      .about__right-title
+        .block-subtitle.block-subtitle_max-weight Чем я могу быть вам полезен
+        hr.line-title
+      .about__right-description.text-content
+        p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+      .about__right-content
+        - 
+          var skills = [
+            ['Frontend', [['HTML5', 30], ['CCS3', 50], ['JavaScript', 10], ['JQuery', 10]]],
+            ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js', 70], ['Mongo.db', 70]]],
+            ['Workflow', [['Git', 30], ['Gulp', 50], ['Webpack', 70]]],
+          ]
+
+        ul.skills-list
+          each skillsrow in skills
+            li.skills-list__item.skills-row
+              .skills-row__title #{skillsrow[0]}
+              ul.skills-row__list
+                each skill in skillsrow[1]
+                  li.skills-row__item
+                    figure.skill(data-percents="70")
+                      svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
+                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
+                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
+                      .skill__title #{skill[0]}
+                  
+  section.map
+    .google-map
+      .contacts
+        h2.contacts__title
+          .block-subtitle Контакты
+          hr.line-title
+        address.contacts__data
+          ul.contacts__list
+              li.contacts__item.contacts-row
+                a(href='skype:chini_chi').contacts-row.contacts__link chini_chi
+                  +icon('skype', 'contacts__icon-img contacts__icon-img_skype')
+              li.contacts__item.contacts-row
+                a(href='mailto:chini.chy@gmail.com').contacts-row.contacts__link chini.chy@gmail.com
+                  +icon('envelope2', 'contacts__icon-img contacts__icon-img_mail')
+              li.contacts__item.contacts-row
+                a(href='tel:+375445792603').contacts-row.contacts__link +375(44)579-26-03
+                  +icon('phone2', 'contacts__icon-img contacts__icon-img_phone')
+              li.contacts__item.contacts-row
+                a(href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A6%D0%BD%D1%8F%D0%BD%D1%81%D0%BA%D0%B0%D1%8F+5,+%D0%9C%D0%B8%D0%BD%D1%81%D0%BA/@53.9224778,27.5799215,17z/data=!3m1!4b1!4m5!3m4!1s0x46dbcfa01166b0d3:0xa512b4091abf9885!8m2!3d53.9224747!4d27.5821102" target="_blank").contacts-row.contacts__link ул.Цнянская 5
+                  +icon('map_marker', 'contacts__icon-img contacts__icon-img_marker')            
+              
+
+  
+
+

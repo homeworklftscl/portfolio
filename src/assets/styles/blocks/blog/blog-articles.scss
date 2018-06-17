@@ -1,0 +1,48 @@
+.blog-articles {
+    height: 100%;
+    margin-left: 135px;
+    text-align: left;
+}
+
+.articles__item {
+    margin-bottom: 70px;
+}
+
+.articles__title {
+    font-family: 'sansus_webissimoregular', Arial, Helvetica, sans-serif;
+    color: #455a64;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 23px;
+}
+
+.articles__data {
+    display: block;
+    color: rgba(78, 136, 57, 0.7);
+    margin-bottom: 20px;
+}
+
+.articles__content {
+    max-width: 880px;
+    margin-bottom: 70px;
+}
+
+.articles__text {
+    color: #455a64;
+    margin-bottom: 18px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.articles__img {
+    background-image: url(assets/images/code.jpg);
+    height: 128px;
+    width: 980px;
+}
+
+.articles__line {
+    background-color: rgba(55, 62, 66, 0.07);
+    width: 681px;
+    height: 5px;
+}

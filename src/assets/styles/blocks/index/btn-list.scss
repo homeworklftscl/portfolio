@@ -1,0 +1,46 @@
+.btn__list {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.btn__item {
+    width: 100%;
+    border-right: 2px solid #a9acae;
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.btn__link {
+    background-color: #6c9c5a;
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 14px 31px;
+}
+
+.btn__title {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.btn__comein,
+.btn__home {
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: #6c9c5a;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
+}
+
+.btn__comein,
+.btn__link,
+.btn__home {
+    transition: .5s;
+    &:hover {
+        background-color: #4e8839;
+    }
+}

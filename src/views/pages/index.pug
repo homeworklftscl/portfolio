@@ -1,6 +1,65 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+    .wrapper
+      .blocks
+        .blocks-top
+          button.btn-authorization авторизоваться
+        .blocks-mid
+          .card
+            .card__face
+              .card__list_wrap
+                include ../common/card-list.pug
+              .social
+                include ../common/social.pug
+                  
+              ul.btn__list
+                li.btn__item
+                  a.btn__link(href="#")
+                    span.btn__title Мои работы
+                li.btn__item
+                  a.btn__link(href="./about.html")
+                    span.btn__title Обо мне
+                li.btn__item
+                  a.btn__link(href="./blog.html")
+                    span.btn__title Блог
+                
+            .card__autoriz
+              h1.card__subtitle авторизуйтесь
+              hr.card__line
+              form.form(action="")
+                label.form__label
+                  .form__icon
+                    +icon('login', 'input__svg')
+                  input.form__login(type="text", placeholder="Логин")
+                label.form__label
+                  .form__icon
+                    +icon('password', 'input__svg')
+                  input.form__pass(type="password", placeholder="Пароль")
+                .form__check_wrap  
+                  label.form__check
+                    input.check(type="checkbox")
+                    .check__style
+                      +icon('check', 'check__svg')
+                      .check__style_active
+                    span.name Я человек
+                h3.form__query Вы точно не робот?
+                .form__radio
+                  label.form__radio_yes
+                    input.radio(type="radio", name="name", value="Да")
+                    span.radio__style
+                    span.name Да
+                  label.form__radio_no
+                    input.radio(type="radio", name="name", value="Нет")
+                    span.radio__style
+                    span.name Не уверен
+              ul.btn__list
+                li.btn__item
+                  button.btn__home
+                    span.btn__title На главную
+                li.btn__item
+                  button.btn__comein(type='submit')
+                    span.btn__title Войти
+            
+        .blocks-bot  
+          include ../common/copyright.pug
