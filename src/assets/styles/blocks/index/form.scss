@@ -30,12 +30,21 @@
         border: 1px solid #4d8936;
     }
     &::-webkit-input-placeholder {
+        color: rgba(93, 90, 85, 0.5);
         opacity: 1;
         transition: opacity 0.5s ease;
     }
     &:focus::-webkit-input-placeholder {
         opacity: 0;
         transition: opacity 0.5s ease;
+    }
+    &::-moz-placeholder {
+        transition: color 0.5s;
+        color: rgba(93, 90, 85, 0.5);
+    }
+    &:focus::-moz-placeholder {
+        color: transparent;
+        transition: color 0.5s;
     }
 }
 
@@ -76,7 +85,7 @@
     transition: .3s;
 }
 
-.check__svg{
+.check__svg {
     width: 12px;
     height: 9px;
     fill: white;

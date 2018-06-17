@@ -1,0 +1,32 @@
+.works {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+    align-items: center;
+    height: 100vh;
+}
+
+.works__title,
+.speak__title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}  
+
+.block-title_size {
+    max-width: 569px;
+    text-align: center;
+}
+
+.works-header__svg {
+    position: absolute;
+    width: 506px;
+    fill: #d7e8b5;
+    opacity: .6;
+    z-index: 1;
+}
+

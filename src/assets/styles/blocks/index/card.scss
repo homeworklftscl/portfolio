@@ -4,6 +4,7 @@
     height: 395px;
     position: relative;
     perspective: 1000px;
+    overflow: hidden;
     &:hover .card__face {
         transform: rotateY(180deg);
     }
@@ -17,7 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
 }
 .card__list {
     display: flex;
@@ -50,8 +51,8 @@
 }
 
 .card__img {
-    width: 141px;
-    height: 141px;
+    width: 170px;
+    height: 170px;
     object-fit: cover;
     object-position: top;
     border-radius: 50%;
