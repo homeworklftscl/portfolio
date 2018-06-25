@@ -10,4 +10,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: rgba(55, 62, 66, 0.85);
+    @include laptop {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "info social" "quote quote"
+    }
+    @include phones {
+        padding: 0 30px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "info" "social" "quote"
+    }
 }

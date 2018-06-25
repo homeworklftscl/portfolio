@@ -1,11 +1,39 @@
 .hamburger {
-    width: 40px;
+    width: 45px;
     height: 35px;
     position: relative;
+    cursor: pointer;
 }
 
-.hamburger__svg {
-    fill: white;
+.hamburger-layer {
+    transition: all .5s;
+    position: absolute;
+    height: 4px;
     width: 100%;
-    height: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    top: 0;
+    &:nth-child(2) {
+        top: 35%;
+    }
+    &:nth-child(3) {
+        top: 70%;
+    }
+}
+
+.hamburger_active {
+    .hamburger-layer {
+        &:nth-child(1) {
+            top: 50%;
+            transform: rotate(-135deg)
+        }
+        &:nth-child(2) {
+            transition: 0s;
+            background-color: transparent;
+        }
+        &:nth-child(3) {
+            top: 50%;
+            transform: rotate(135deg)
+        }
+    }
 }

@@ -14,26 +14,8 @@ block content
             +icon('works_header', 'works-header__svg')
         hr.line-title
             
-        .works-slider
-            .works-slider__info
-                .works-slider__info-title
-                    h3.block-subtitle сайт школы онлайн образования
-                hr.line-title
-                .works-slider__info-skills HTML , CSS, JAVASCRIPT
-                .works-slider__info-btn
-                    a(href='#').works-slider__info-btn-link Посмотреть сайт
-                        +icon('link', 'link__svg')
-            .works-slider__big-img-wrap
-                img(srs='assets/images/content/work-1.png').works-slider__big-img
-            .works-slider__buttons
-                .works-slider__button
-                    .works-slider__button-img-wrap
-                        +icon('arrow_down', 'prev__svg')
-                    img(srs='assets/images/content/work-2.png').works-slider__prev-img
-                .works-slider__button
-                    .works-slider__button-img-wrap
-                        +icon('arrow_up', 'next__svg')
-                    img(srs='assets/images/content/work-3.png').works-slider__next-img
+        .works-slider_container
+            #slider-component
 
                   
     section.speak
@@ -50,7 +32,7 @@ block content
             .speak-comment__user
                 ul.speak-comment__user-list
                     li.speak-comment__user-item
-                        img(src='assets/images/koval.jpg').speak-comment__user-avatar.card__img
+                        img(src='assets/images/users/koval.jpg').speak-comment__user-avatar.card__img
                     li.speak-comment__user-item
                         +icon('quotes', 'quotes__svg')
                         .speak-comment__user-text
@@ -63,7 +45,7 @@ block content
             .speak-comment__user 
                  ul.speak-comment__user-list
                     li.speak-comment__user-item
-                        img(src='assets/images/saban.jpg').speak-comment__user-avatar.card__img
+                        img(src='assets/images/users/saban.jpg').speak-comment__user-avatar.card__img
                     li.speak-comment__user-item
                         +icon('quotes', 'quotes__svg')  
                         .speak-comment__user-text

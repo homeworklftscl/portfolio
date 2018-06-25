@@ -1,16 +1,10 @@
 .card {
     border-radius: 6px;
     width: 380px;
-    height: 395px;
+    height: 405px;
     position: relative;
     perspective: 1000px;
     overflow: hidden;
-    &:hover .card__face {
-        transform: rotateY(180deg);
-    }
-    &:hover .card__autoriz {
-        transform: rotateY(360deg);
-    }
 }
 
 .card__list_wrap {
@@ -20,6 +14,7 @@
     align-items: center;
     margin-bottom: 20px;
 }
+
 .card__list {
     display: flex;
     flex-direction: column;
@@ -39,8 +34,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    transition: 1s;
-    transition-delay: 1.6s;
+    transition: .7s;
     backface-visibility: hidden;
     border-radius: 10px;
     background-color: rgba(18, 38, 32, 0.6);
@@ -48,6 +42,15 @@
 
 .card__autoriz {
     transform: rotateY(180deg);
+    padding: 0 20px 45px 20px;
+}
+
+.card__face_active {
+    transform: rotateY(180deg);
+}
+
+.card__autoriz_active {
+    transform: rotateY(360deg);
 }
 
 .card__img {
@@ -72,9 +75,13 @@
     font-style: normal;
     line-height: 1;
     margin-bottom: 25px;
+    @include m-phones {
+        margin-bottom: 20px;
+    }
 }
 
 .card__desc {
+    white-space: nowrap;
     color: #a9acae;
 }
 
@@ -83,4 +90,7 @@
     width: 89px;
     height: 3px;
     margin-bottom: 30px;
+    @include s-phones {
+        margin-bottom: 20px;
+    }
 }

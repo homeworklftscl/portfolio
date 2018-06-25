@@ -1,5 +1,11 @@
 .blog-nav {
-    max-width: 300px;
+    min-width: 300px;
+    @include laptop {
+        min-width: 260px;
+    }
+    @include tablets {
+        display: none;
+    }
 }
 
 .blog-nav__item {

@@ -1,16 +1,22 @@
 .form {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .form__label {
     margin-bottom: 20px;
     display: flex;
+    @include tablets {
+        height: 47px;
+    }
+    @include m-phones {
+        margin-bottom: 15px;
+    }
 }
 
 .form__icon {
     width: 45px;
-    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,8 +26,8 @@
 
 .form__login,
 .form__pass {
-    width: 295px;
-    height: 45px;
+    width: 100%;
+    height: 100%;
     border-radius: 0 30px 30px 0;
     outline: none;
     border: 1px solid transparent;
@@ -59,7 +65,6 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
 }
 
 .form__check_wrap {

@@ -2,6 +2,13 @@
     width: 50%;
     padding: 40px 40px 47px 35px;
     background-color: #f4f5f0;
+    @include tablets {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .block-subtitle_max-weight {
@@ -17,6 +24,10 @@
 
 .about__right-description {
     margin-bottom: 50px;
+    @include tablets {
+        max-width: 410px;
+        text-align: center;
+    }
 }
 
 .about__right-content {

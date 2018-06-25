@@ -8,16 +8,68 @@
     &:first-child {
         border-left: none;
     }
+    @include laptop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0;
+    }
+    @include phones {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-left: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+.footer__info {
+    @include laptop {
+        grid-area: info;
+    }
+}
+
+.footer__social {
+    @include laptop {
+        grid-area: social;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px 30px;
+    }
+    @include phones {
+        padding: 20px 0px;
+    }
+}
+
+.footer__quote {
+    @include laptop {
+        grid-area: quote;
+    }
 }
 
 .footer__info_text {
     max-width: 350px;
+    @include phones {
+        text-align: center;
+    }
 }
 
 .footer__quote_text {
     max-width: 480px;
     opacity: .7;
     font-style: italic;
+    @include laptop {
+        max-width: 100%;
+    }
+    @include phones {
+        text-align: center;
+    }
 }
 
 .footer__quote_text,
@@ -37,11 +89,19 @@
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 25px;
+    @include laptop {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
 }
 
 .footer__item {
     margin-right: 40px;
     &:last-child {
+        margin-right: 0;
+    }
+    @include laptop {
         margin-right: 0;
     }
 }
