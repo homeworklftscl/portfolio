@@ -7,6 +7,7 @@
 }
 
 .footer__wrap {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: rgba(55, 62, 66, 0.85);
 }

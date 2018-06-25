@@ -28,7 +28,9 @@
 }
 
 .btn__comein,
-.btn__home {
+.btn__home,
+.btn__reset,
+.btn__send {
     width: 100%;
     height: 50px;
     color: white;
@@ -38,7 +40,9 @@
 
 .btn__comein,
 .btn__link,
-.btn__home {
+.btn__home,
+.btn__reset,
+.btn__send {
     transition: .5s;
     &:hover {
         background-color: #4e8839;

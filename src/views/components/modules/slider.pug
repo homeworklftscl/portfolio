@@ -1,0 +1,29 @@
+script(type="text/x-template")#slider
+  .slider
+    .info
+    .display
+    .buttons
+
+    
+
+script(type="text/x-template")#slider-info
+  .slider__info-container
+    .slider__info
+      .slider__info-title
+        .block-subtitle сайт школы онлайн образования
+      .slider__info-skills HTML, CSS3, JavaScript
+      .slider__info-button
+        a(:href="work.link" target="_blank").button Посмотреть сайт
+
+script(type="text/x-template")#slider-display
+  .slider__display
+    img(:src="work.photo").slider__big-pic
+
+script(type="text/x-template")#slider-buttons
+  .slider__buttons
+    .slider__button(@click="slide('prev')")
+      .slider__button-img-wrap
+        img(:src="getReqImage('prev').photo", alt="").slider__button-pic
+    .slider__button.slider__button--next(@click="slide('next')")
+      .slider__button-img-wrap
+        img(:src="getReqImage('next').photo", alt="").slider__button-pic

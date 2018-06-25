@@ -16,35 +16,46 @@
 
 .title {
     position: relative;
-    width: 357px;
-    height: 125px;
+    padding-bottom: 30px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.line-title,
-.line-subtitle {
-    background-color: #373e42;
+.line-title {
+    background-color: rgba(55, 62, 66, 0.85);
     width: 89px;
     height: 3px;
+    z-index: 2;
     margin: 0 auto;
-    margin-bottom: 29px;
+    margin-bottom: 30px;
 }
 
-.block-title {
+.block-title,
+.block-subtitle {
     font-family: 'sansus_webissimoregular';
     color: rgba(55, 62, 66, 0.85);
     font-size: 62.94px;
-    font-weight: 700;
     z-index: 2;
-    margin-top: 10px;
+    text-transform: uppercase;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-subtitle {
+    text-align: center;
+    font-size: 35px;
+    white-space: wrap;
+    padding-bottom: 30px;
 }
 
 .about-header__svg {
     position: absolute;
-    height: 100%;
-    width: 100%;
+    width: 357px;
     fill: #d7e8b5;
     opacity: .6;
     z-index: 1;
@@ -76,17 +87,6 @@
 
 .user-description__text {
     max-width: 415px;
-}
-
-.block-subtitle {
-    font-family: 'sansus_webissimoregular';
-    color: rgba(55, 62, 66, 0.85);
-    text-align: center;
-    font-size: 35px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    white-space: wrap;
-    line-height: 1;
 }
 
 .line-subtitle {

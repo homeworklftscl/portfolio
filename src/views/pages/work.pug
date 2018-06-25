@@ -1,0 +1,92 @@
+extends ../work.layout.pug
+
+block variables
+  - var title = 'my works';
+
+block scripts
+  script(src='works.bundle.js')  
+
+block content
+
+    section.works
+        .title
+            h2.block-title мои работы
+            +icon('works_header', 'works-header__svg')
+        hr.line-title
+            
+        .works-slider
+            .works-slider__info
+                .works-slider__info-title
+                    h3.block-subtitle сайт школы онлайн образования
+                hr.line-title
+                .works-slider__info-skills HTML , CSS, JAVASCRIPT
+                .works-slider__info-btn
+                    a(href='#').works-slider__info-btn-link Посмотреть сайт
+                        +icon('link', 'link__svg')
+            .works-slider__big-img-wrap
+                img(srs='assets/images/content/work-1.png').works-slider__big-img
+            .works-slider__buttons
+                .works-slider__button
+                    .works-slider__button-img-wrap
+                        +icon('arrow_down', 'prev__svg')
+                    img(srs='assets/images/content/work-2.png').works-slider__prev-img
+                .works-slider__button
+                    .works-slider__button-img-wrap
+                        +icon('arrow_up', 'next__svg')
+                    img(srs='assets/images/content/work-3.png').works-slider__next-img
+
+                  
+    section.speak
+        .speak-bg
+        img(src='assets/images/list1.png').leaf-1 
+        img(src='assets/images/list2.png').leaf-2 
+        img(src='assets/images/list3.png').leaf-3 
+        .title
+            h2.block-title.block-title_size что обо мне говорят
+            +icon('about_header', 'works-header__svg')
+        hr.line-title
+            
+        .speak-comment
+            .speak-comment__user
+                ul.speak-comment__user-list
+                    li.speak-comment__user-item
+                        img(src='assets/images/koval.jpg').speak-comment__user-avatar.card__img
+                    li.speak-comment__user-item
+                        +icon('quotes', 'quotes__svg')
+                        .speak-comment__user-text
+                            p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    li.speak-comment__user-item
+                        .speak-comment__user-name
+                            .user-name Ковальчук Дмитрий
+                            .user-prof - основатель Loftschool
+
+            .speak-comment__user 
+                 ul.speak-comment__user-list
+                    li.speak-comment__user-item
+                        img(src='assets/images/saban.jpg').speak-comment__user-avatar.card__img
+                    li.speak-comment__user-item
+                        +icon('quotes', 'quotes__svg')  
+                        .speak-comment__user-text
+                            p Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                    li.speak-comment__user-item
+                        .speak-comment__user-name
+                            .user-name Сабанцев Владимир
+                            .user-prof - преподователь Loftschool
+                
+        .speak__form
+            form.form 
+                h3.block-subtitle связаться со мной
+                hr.line-title
+                input(type="name" placeholder="Имя").form__user-name 
+                input(type="email" placeholder="Email").form__user-name 
+                textarea(placeholder="Ваше сообщение").form__user-comment
+                ul.btn__list
+                        li.btn__item
+                            button.btn__send(type='submit')
+                                span.btn__title Отправить
+                        li.btn__item
+                            button.btn__reset(type='reset')
+                                span.btn__title Очистить
+        .arrow-up
+            +icon('arrow_up', 'up__svg')                        
+

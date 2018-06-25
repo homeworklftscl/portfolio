@@ -10,12 +10,14 @@
     height: 20px;
     position: absolute;
     cursor: pointer;
-    z-index: 2;
 }
-
 
 .down__svg {
     width: 100%;
     height: 100%;
-    fill: white;
+    fill: rgb(215, 208, 200);
+    transition: .5s;
+    &:hover {
+        fill: white;
+    }
 }
