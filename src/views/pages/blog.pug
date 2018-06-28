@@ -9,20 +9,26 @@ block scripts
 block content
 
   .container.blog
+
     nav.blog-nav
-      ul.blog-nav__list
-        -
-          var blogNav = [
-            ['Самое важное в SASS'],
-            ['Приемы в верстке, без которых не обходиться ни один сайт'],
-            ['Самый необходимый набор Gulp плагинов'],
-            ['Почему я выбрал Pug'],
-            
-          ]
-        
-        each items in blogNav
-          li.blog-nav__item
-            a(href='').blog-nav__link #{items}
+      .blog-nav__list-wrap
+        ul.blog-nav__list
+          -
+            var blogNav = [
+              ['Самое важное в SASS'],
+              ['Приемы в верстке, без которых не обходиться ни один сайт'],
+              ['Самый необходимый набор Gulp плагинов'],
+              ['Почему я выбрал Pug'],
+
+              
+            ]
+          
+          each items in blogNav
+            li.blog-nav__item
+              a(href='').blog-nav__link #{items}
+
+        .trigger
+          +icon('arrow_down', 'nav__svg')        
 
     .blog-articles
       ul.articles__list

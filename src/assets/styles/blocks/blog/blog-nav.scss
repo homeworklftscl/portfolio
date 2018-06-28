@@ -4,11 +4,38 @@
         min-width: 260px;
     }
     @include tablets {
-        display: none;
+        transition: .5s;
+        width: 0;
+        min-width: 0;
+        background-color: #6c9c5a;
+        margin-right: 37px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+.blog-nav_active {
+    @include tablets {
+        width: 100%;
+        min-width: 300px;
+    }
+    .blog-nav__list {
+        @include tablets {
+            padding: 20px 30px;
+        }
+    }
+}
+
+.blog-nav__list-wrap {
+    position: sticky;
+    top: 15px;
+    @include tablets {
+        top: 0;
     }
 }
 
 .blog-nav__item {
+    z-index: 20;
     text-align: right;
     margin-bottom: 25px;
     position: relative;
@@ -44,6 +71,15 @@
     &:hover:before {
         width: 4px;
     }
+    @include tablets {
+        &:before {
+            display: none;
+        }
+        color: rgb(100%, 100%, 100%, .7);
+        &:hover {
+            color: rgb(100%, 100%, 100%, 1);
+        }
+    }
 }
 
 .blog-nav__item_active {
@@ -51,5 +87,34 @@
     font-weight: 700;
     .blog-nav__link {
         color: #6c9c5a;
+    }
+}
+
+.trigger {
+    display: none;
+    @include tablets {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        width: 60px;
+        height: 80px;
+        background-color: #6c9c5a;
+        right: -30px;
+        top: 36%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+
+.nav__svg {
+    fill: rgb(100%, 100%, 100%, .7);
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    margin-right: 7px;
+    transition: .4s;
+    &:hover {
+        fill: rgb(100%, 100%, 100%, 1)
     }
 }

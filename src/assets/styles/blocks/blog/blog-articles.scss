@@ -27,6 +27,9 @@
 .articles__item {
     width: 100%;
     margin-bottom: 70px;
+    @include tablets {
+        //min-width: 800px;
+    }
 }
 
 .articles__title {

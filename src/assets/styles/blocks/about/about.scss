@@ -1,6 +1,7 @@
 .about {
     display: flex;
     @include tablets {
+        height: 100%;
         flex-direction: column;
         justify-content: center;
     }
