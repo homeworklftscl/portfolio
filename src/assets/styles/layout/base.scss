@@ -1,3 +1,22 @@
+:root {
+    font-size: 16Px;
+    @include desktop {
+        font-size: 15Px;
+    }
+    @include laptop {
+        font-size: 15Px;
+    }
+    @include tablets {
+        font-size: 14Px;
+    }
+    @include phones {
+        font-size: 13Px;
+    }
+    @include m-phones {
+        font-size: 12Px;
+    }
+}
+
 body,
 html {
     height: 100%;
@@ -8,7 +27,6 @@ html {
 
 body {
     font-family: 'roboto';
-    font-size: 16px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.42;
@@ -26,12 +44,21 @@ body {
 
 .container {
     margin: 0 auto;
-    width: 87%;
+    width: 95%;
     padding-bottom: 185px;
+    @include laptop {
+        padding-bottom: 230px;
+    }
+    @include tablets {
+        width: 90%;
+    }
+    @include phones {
+        padding-bottom: 360px;
+    }
 }
 
 section {
-    height: 100%;
+    height: 100vh;
     min-height: 650px;
     width: 100%;
 }

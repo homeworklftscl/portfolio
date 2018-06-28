@@ -4,6 +4,15 @@
     background-color: #ecefe3;
     display: flex;
     position: relative;
+    @include laptop {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 40px 0;
+    }
+    @include tablets {
+        width: 100%;
+    }
 }
 
 .about__left-title {
@@ -16,20 +25,27 @@
 
 .title {
     position: relative;
-    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 30px;
 }
 
-.line-title {
+.line-title,
+.line-menu {
     background-color: rgba(55, 62, 66, 0.85);
     width: 89px;
     height: 3px;
     z-index: 2;
     margin: 0 auto;
     margin-bottom: 30px;
+}
+
+.line-title_margin {
+    @include s-phones {
+        margin-bottom: 15px;
+    }
 }
 
 .block-title,
@@ -46,19 +62,34 @@
     align-items: center;
 }
 
+.block-title {
+    @include s-phones {
+        white-space: nowrap;
+    }
+}
+
 .block-subtitle {
     text-align: center;
     font-size: 35px;
     white-space: wrap;
     padding-bottom: 30px;
+    @include s-phones {
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
 }
 
 .about-header__svg {
     position: absolute;
+    top: -90%;
+    left: -24%;
     width: 357px;
     fill: #d7e8b5;
     opacity: .6;
     z-index: 1;
+    @include s-phones {
+        top: -130%;
+    }
 }
 
 .about__left-content {
@@ -67,10 +98,16 @@
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+    @include laptop {
+        width: 100%;
+    }
 }
 
 .user-description {
     padding-right: 20px;
+    @include laptop {
+        padding-right: 0;
+    }
 }
 
 .user-description__image {
@@ -83,10 +120,19 @@
     max-width: 100%;
     height: 390px;
     border-radius: 7px;
+    @include laptop {
+        height: 490px;
+    }
+    @include tablets {
+        height: 600px;
+    }
 }
 
 .user-description__text {
     max-width: 415px;
+    @include tablets {
+        text-align: center;
+    }
 }
 
 .line-subtitle {

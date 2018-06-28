@@ -16,4 +16,8 @@
     font-family: 'roboto', Arial, Helvetica, sans-serif;
     color: rgba(255, 255, 255, 0.5);
     font-size: 15.76px;
+    @include phones {
+        text-align: center;
+        max-width: 370px;
+    }
 }

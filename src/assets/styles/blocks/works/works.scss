@@ -2,9 +2,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-top: 50px;
+    margin-top: 50px;
     align-items: center;
-    height: 100vh;
+    //height: 100vh;
 }
 
 .works__title,
@@ -15,18 +15,21 @@
     align-items: center;
     position: relative;
     z-index: 2;
-}  
+}
 
 .block-title_size {
     max-width: 569px;
     text-align: center;
+    white-space: pre-wrap;
 }
 
 .works-header__svg {
     position: absolute;
-    width: 506px;
+    width: 500px;
     fill: #d7e8b5;
     opacity: .6;
     z-index: 1;
+    @include phones {
+        width: 400px;
+    }
 }
-

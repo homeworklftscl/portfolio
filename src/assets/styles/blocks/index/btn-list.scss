@@ -7,7 +7,7 @@
 }
 
 .btn__item {
-    width: 100%;
+    flex-grow: 1;
     border-right: 2px solid #a9acae;
     &:last-child {
         border-right: none;
@@ -20,6 +20,9 @@
     color: white;
     display: block;
     padding: 14px 31px;
+    @include s-phones {
+        padding: 14px 15px;
+    }
 }
 
 .btn__title {

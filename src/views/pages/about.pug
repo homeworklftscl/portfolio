@@ -4,11 +4,12 @@ block variables
   - var title = 'Обо мне';
 
 block scripts
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPL1e5HQU2mJaKZpHGYzQxBOEOa4AC6mE")
   script(src='about.bundle.js')
 
 block content
 
-  section.about
+  section.about#about
     .about__left
 
       .about__left-title
@@ -22,7 +23,7 @@ block content
       .about__left-content
         .user-description
           .user-description__image
-            img.user-description__avatar(src='assets/images/artem.jpg')
+            img.user-description__avatar(src='assets/images/users/artem.jpg')
           .user-description__data
             .user-description__title
               h3.block-subtitle Кто я 
@@ -39,29 +40,13 @@ block content
       .about__right-description.text-content
         p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
       .about__right-content
-        - 
-          var skills = [
-            ['Frontend', [['HTML5', 30], ['CCS3', 50], ['JavaScript', 10], ['JQuery', 10]]],
-            ['Backend', [['PHP', 30], ['mySQL', 50], ['Node.js', 70], ['Mongo.db', 70]]],
-            ['Workflow', [['Git', 30], ['Gulp', 50], ['Webpack', 70]]],
-          ]
 
-        ul.skills-list
-          each skillsrow in skills
-            li.skills-list__item.skills-row
-              .skills-row__title #{skillsrow[0]}
-              ul.skills-row__list
-                each skill in skillsrow[1]
-                  li.skills-row__item
-                    figure.skill(data-percents="70")
-                      svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                        circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                      .skill__title #{skill[0]}
+        #skills-container
+        
                   
   section.map
-    .google-map
-      .contacts
+    .google-map#map
+    .contacts
         h3.contacts__title
           .block-subtitle Контакты
         hr.line-title

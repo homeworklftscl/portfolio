@@ -1,4 +1,8 @@
 .about {
     display: flex;
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 

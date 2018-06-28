@@ -16,9 +16,22 @@
 .triangle__left {
     background-color: #ecefe3;
     clip-path: polygon(0 0, 0 100%, 100% 100%);
+    @include phones {
+        clip-path: polygon(0 33%, 0 100%, 100% 100%);
+    }
 }
 
 .triangle__right {
     background-color: #f4f5f0;
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
+    @include tablets {
+        background-color: #ecefe3;
+    }
+    @include phones {
+        clip-path: polygon(100% 33%, 0 100%, 100% 100%);
+    }
+}
+
+.triangle_color {
+    background-color: #faf8f0;
 }

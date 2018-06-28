@@ -1,16 +1,18 @@
 header.header
-
+    
     .blocks-top
-        include ../common/social.pug
-        .hamburger
-            +icon('hamburger', 'hamburger__svg')
+        .social__wrap
+            include ../common/social.pug
+    include ../common/full-menu.pug
+    #app.ham-wrap      
+        include ../common/hamburger.pug
     .portfolio__header
         +icon('portfolio_header', 'portfolio__svg')       
     .blog__face
         include ../common/card-list.pug
     .portfolio__header
         +icon('portfolio_header', 'portfolio__svg')
-    .arrow-down
+    a(href="#about").arrow-down
         +icon('arrow_down', 'down__svg')    
     .triangle
         .triangle__left

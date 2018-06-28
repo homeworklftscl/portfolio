@@ -47,6 +47,13 @@ gulp.task("scripts", () => {
     .pipe(reload({ stream: true }));
 });
 
+// переносим бандл water.js
+gulp.task("water", () => {
+  return gulp
+    .src(`${config.SRC_DIR}/scripts/modules/water.js`)
+    .pipe(gulp.dest(`${config.DIST_DIR}`));
+});
+
 //рендерим странички
 gulp.task("pug", () => {
   return gulp
@@ -129,7 +136,7 @@ gulp.task(
   "default",
   gulp.series(
     "clean",
-    "svg",
+    gulp.parallel("svg", "water"),
     gulp.parallel("styles", "pug", "images", "fonts", "scripts"),
     gulp.parallel("watch", "server")
   )
@@ -140,7 +147,7 @@ gulp.task(
   "build",
   gulp.series(
     "clean",
-    "svg",
+    gulp.parallel("svg", "water"),
     gulp.parallel("styles", "pug", "images", "fonts", "scripts")
   )
 );
