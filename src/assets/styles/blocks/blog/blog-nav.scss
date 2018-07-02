@@ -5,24 +5,19 @@
     }
     @include tablets {
         transition: .5s;
-        width: 0;
-        min-width: 0;
-        background-color: #6c9c5a;
-        margin-right: 37px;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+        position: absolute;
+        bottom: 0;
+        transform: translateX(0);
+        max-width: none;
+        right: 100%;
+        top: 0;
+        width: 50%;
     }
 }
 
 .blog-nav_active {
     @include tablets {
-        width: 100%;
-        min-width: 300px;
-    }
-    .blog-nav__list {
-        @include tablets {
-            padding: 20px 30px;
-        }
+        transform: translateX(100%);
     }
 }
 
@@ -30,7 +25,9 @@
     position: sticky;
     top: 15px;
     @include tablets {
-        top: 0;
+        background-color: #6c9c5a;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 }
 
@@ -41,6 +38,15 @@
     position: relative;
     &:last-child {
         margin-bottom: 0;
+    }
+}
+
+.blog-nav__list {
+    @include tablets {
+        padding: 20px 30px 20px 70px;
+    }
+    @include phones {
+        padding: 20px 30px 20px 50px;
     }
 }
 

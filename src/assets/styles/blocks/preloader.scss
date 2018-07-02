@@ -1,0 +1,67 @@
+.preloader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(assets/images/bg/forest_preloader.gif);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    visibility: visible;
+    opacity: 1;
+    transition: all .5s;
+    visibility: visible;
+}
+
+&.done {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader {
+    position: relative;
+}
+
+.forest-svg {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    fill: none;
+    stroke: white;
+    stroke-width: 3.5;
+    stroke-dasharray: 95;
+    stroke-dashoffset: 0;
+    animation: wave 3s linear infinite;
+}
+
+.wave-2 {
+    stroke: red;
+}
+
+.text-svg {
+    font-family: 'sansus_webissimoregular';
+    line-height: 1;
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+@keyframes wave {
+    0% {
+        stroke-dashoffset: 95;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}

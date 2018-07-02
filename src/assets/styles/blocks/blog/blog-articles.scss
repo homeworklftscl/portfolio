@@ -20,16 +20,13 @@
         padding-right: 20px;
     }
     @include tablets {
-        padding-right: 0;
+        padding: 0 35px;
     }
 }
 
 .articles__item {
     width: 100%;
     margin-bottom: 70px;
-    @include tablets {
-        //min-width: 800px;
-    }
 }
 
 .articles__title {

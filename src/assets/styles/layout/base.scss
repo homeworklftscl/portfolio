@@ -53,11 +53,14 @@ body {
         padding-bottom: 230px;
     }
     @include tablets {
-        margin: 0;
-        width: 90%;
+        width: 100%;
     }
     @include phones {
+        //width: 85%;
         padding-bottom: 360px;
+    }
+    @include s-phones {
+        //width: 83%;
     }
 }
 

@@ -13,11 +13,10 @@ const skill = {
         getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
       );
       const persents = (dashOffset / 100) * (100 - this.skillPercents);
-      window.addEventListener("scroll", function () {
+      window.addEventListener("scroll", function() {
         const posTop = circle.getBoundingClientRect().top;
         const exactTop = posTop.toFixed();
-        console.log(exactTop);
-        if (exactTop > 300 && exactTop < 600) {
+        if (exactTop > 300 && exactTop < 800) {
           circle.style.strokeDashoffset = persents;
         }
       });
