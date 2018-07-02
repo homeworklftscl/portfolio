@@ -89,10 +89,26 @@
 }
 
 .blog-nav__item_active {
-    border-right: 3px solid #6c9c5a;
-    font-weight: 700;
+    &:before {
+        transition: .7s;
+        content: "";
+        background-color: #6c9c5a;
+        bottom: 0%;
+        top: 0%;
+        display: block;
+        position: absolute;
+        right: -15px;
+        transition: .3s;
+        width: 4px;
+    }
+    @include tablets {
+        color: rgb(100%, 100%, 100%, 1);
+    }
     .blog-nav__link {
         color: #6c9c5a;
+        @include tablets {
+            color: rgb(100%, 100%, 100%, 1);
+        }
     }
 }
 

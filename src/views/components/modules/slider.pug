@@ -26,8 +26,7 @@ template#slider-info
             @after-enter="callback('after-enter')"
             @enter="enterHandler"
         )
-
-        .works-slider__info-skills(:key="work.skills") {{work.skills}}
+            .works-slider__info-skills(:key="work.skills") {{work.skills}}
         .works-slider__info-btn
             a(:href="work.link" target="_blank").works-slider__info-btn-link Посмотреть сайт
                 +icon('link', 'link__svg')
@@ -39,10 +38,15 @@ template#slider-display
 template#slider-buttons
   .works-slider__buttons
     .works-slider__button(@click="slide('prev')")
+        .wrap
+            +icon('arrow_down', 'prev__svg')
         transition-group(name="slide-down" tag="div").slider__button-img-container
             .works-slider__button-img-wrap(:key="getReqImage('prev').photo")
                 img(:src="getReqImage('prev').photo", alt="work").works-slider__prev-img
     .works-slider__button(@click="slide('next')")
+        .wrap
+            +icon('arrow_up', 'next__svg')
         transition-group(name="slide-up" tag="div").slider__button-img-container
             .works-slider__button-img-wrap(:key="getReqImage('next').photo")
                 img(:src="getReqImage('next').photo", alt="work").works-slider__next-img
+                

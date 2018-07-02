@@ -13,3 +13,14 @@ $(document).ready(function() {
     $("html, body").animate({ scrollTop: 0 }, 1000);
   });
 });
+
+let ul = $(".blog-nav__list");
+ul.on("click", handle);
+
+function handle(e) {
+  let target = $(e.target);
+  if (target.is("a")) {
+    let scroll_el = target.attr("href");
+    $("html, body").animate({ scrollTop: $(scroll_el).offset().top }, 1000);
+  }
+}
