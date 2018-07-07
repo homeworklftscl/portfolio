@@ -1,9 +1,10 @@
 .about {
     display: flex;
-    @include tablets {
+    @include laptop {
         height: 100%;
+    }
+    @include tablets {
         flex-direction: column;
         justify-content: center;
     }
 }
-
