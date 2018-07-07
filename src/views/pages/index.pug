@@ -2,6 +2,7 @@ extends ../auth.layout.pug
 
 block content
     .wrapper
+      include ../common/preloader.pug
       .blocks
         canvas.blocks-canvas
         .blocks-top
@@ -28,15 +29,15 @@ block content
             .card__autoriz
               h1.card__subtitle авторизуйтесь
               hr.card__line
-              form.form(action="")
+              form.form(action="" method="post")
                 label.form__label
                   .form__icon
                     +icon('login', 'input__svg')
-                  input.form__login(type="text", placeholder="Логин")
+                  input.form__login(required type="text", placeholder="Логин")
                 label.form__label
                   .form__icon
                     +icon('password', 'input__svg')
-                  input.form__pass(type="password", placeholder="Пароль")
+                  input.form__pass(required type="password", placeholder="Пароль")
                 .form__check_wrap  
                   label.form__check
                     input.check(type="checkbox")

@@ -8,7 +8,7 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-
+  include ../common/preloader.pug
   section.about#about
     .about__left
 
@@ -23,7 +23,7 @@ block content
       .about__left-content
         .user-description
           .user-description__image
-            img.user-description__avatar(src='assets/images/users/artem.jpg')
+            img.user-description__avatar(src='assets/images/users/artem.jpg' alt="avatar")
           .user-description__data
             .user-description__title
               h3.block-subtitle Кто я 

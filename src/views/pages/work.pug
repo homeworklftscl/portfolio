@@ -7,8 +7,8 @@ block scripts
   script(src='works.bundle.js')  
 
 block content
-
-    section.works
+    include ../common/preloader.pug
+    section.works#works
         .title
             h2.block-title мои работы
             +icon('works_header', 'works-header__svg')
@@ -20,9 +20,9 @@ block content
                   
     section.speak
         .speak-bg
-        img(src='assets/images/list1.png').leaf-1 
-        img(src='assets/images/list2.png').leaf-2 
-        img(src='assets/images/list3.png').leaf-3 
+        img(src='assets/images/list1.png' alt="leaf").leaf-1 
+        img(src='assets/images/list2.png' alt="leaf").leaf-2 
+        img(src='assets/images/list3.png' alt="leaf").leaf-3 
         .title
             h2.block-title.block-title_size что обо мне говорят
             +icon('about_header', 'works-header__svg')
@@ -32,7 +32,7 @@ block content
             .speak-comment__user
                 ul.speak-comment__user-list
                     li.speak-comment__user-item
-                        img(src='assets/images/users/koval.jpg').speak-comment__user-avatar.card__img
+                        img(src='assets/images/users/koval.jpg' alt="user").speak-comment__user-avatar.card__img
                     li.speak-comment__user-item
                         +icon('quotes', 'quotes__svg')
                         .speak-comment__user-text
@@ -45,7 +45,7 @@ block content
             .speak-comment__user 
                  ul.speak-comment__user-list
                     li.speak-comment__user-item
-                        img(src='assets/images/users/saban.jpg').speak-comment__user-avatar.card__img
+                        img(src='assets/images/users/saban.jpg' alt="user").speak-comment__user-avatar.card__img
                     li.speak-comment__user-item
                         +icon('quotes', 'quotes__svg')  
                         .speak-comment__user-text
@@ -56,12 +56,12 @@ block content
                             .user-prof - преподователь Loftschool
                 
         .speak__form
-            form.form 
+            form(action="test.php" method="post").form#order-form 
                 h3.block-subtitle связаться со мной
                 hr.line-title
-                input(type="name" placeholder="Имя").form__user-name 
-                input(type="email" placeholder="Email").form__user-name 
-                textarea(placeholder="Ваше сообщение").form__user-comment
+                input(required type="text" placeholder="Имя" name="user-name").form__user-name#user-name  
+                input(required type="email" placeholder="Email" name="user-email").form__user-email#user-email  
+                textarea(placeholder="Ваше сообщение" name="comment").form__user-comment#comment
                 ul.btn__list
                         li.btn__item
                             button.btn__send(type='submit')
@@ -69,6 +69,6 @@ block content
                         li.btn__item
                             button.btn__reset(type='reset')
                                 span.btn__title Очистить
-        .arrow-up
+        a.arrow-up
             +icon('arrow_up', 'up__svg')                        
 

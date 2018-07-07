@@ -4,16 +4,49 @@
         min-width: 260px;
     }
     @include tablets {
-        display: none;
+        transition: .5s;
+        position: absolute;
+        bottom: 0;
+        transform: translateX(0);
+        max-width: none;
+        right: 100%;
+        top: 0;
+        width: 50%;
+    }
+}
+
+.blog-nav_active {
+    @include tablets {
+        transform: translateX(100%);
+    }
+}
+
+.blog-nav__list-wrap {
+    position: sticky;
+    top: 15px;
+    @include tablets {
+        background-color: #6c9c5a;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
     }
 }
 
 .blog-nav__item {
+    z-index: 20;
     text-align: right;
     margin-bottom: 25px;
     position: relative;
     &:last-child {
         margin-bottom: 0;
+    }
+}
+
+.blog-nav__list {
+    @include tablets {
+        padding: 20px 30px 20px 70px;
+    }
+    @include phones {
+        padding: 20px 30px 20px 50px;
     }
 }
 
@@ -44,12 +77,66 @@
     &:hover:before {
         width: 4px;
     }
+    @include tablets {
+        &:before {
+            display: none;
+        }
+        color: rgb(100%, 100%, 100%, .7);
+        &:hover {
+            color: rgb(100%, 100%, 100%, 1);
+        }
+    }
 }
 
 .blog-nav__item_active {
-    border-right: 3px solid #6c9c5a;
-    font-weight: 700;
+    &:before {
+        transition: .7s;
+        content: "";
+        background-color: #6c9c5a;
+        bottom: 0%;
+        top: 0%;
+        display: block;
+        position: absolute;
+        right: -15px;
+        transition: .3s;
+        width: 4px;
+    }
+    @include tablets {
+        color: rgb(100%, 100%, 100%, 1);
+    }
     .blog-nav__link {
         color: #6c9c5a;
+        @include tablets {
+            color: rgb(100%, 100%, 100%, 1);
+        }
+    }
+}
+
+.trigger {
+    display: none;
+    @include tablets {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        width: 60px;
+        height: 80px;
+        background-color: #6c9c5a;
+        right: -30px;
+        top: 36%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+
+.nav__svg {
+    fill: rgb(100%, 100%, 100%, .7);
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+    margin-right: 7px;
+    transition: .4s;
+    &:hover {
+        fill: rgb(100%, 100%, 100%, 1)
     }
 }

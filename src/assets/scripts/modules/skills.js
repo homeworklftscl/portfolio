@@ -13,8 +13,13 @@ const skill = {
         getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
       );
       const persents = (dashOffset / 100) * (100 - this.skillPercents);
-
-      circle.style.strokeDashoffset = persents;
+      window.addEventListener("scroll", function() {
+        const posTop = circle.getBoundingClientRect().top;
+        const exactTop = posTop.toFixed();
+        if (exactTop > 300 && exactTop < 800) {
+          circle.style.strokeDashoffset = persents;
+        }
+      });
     }
   },
   mounted() {

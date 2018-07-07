@@ -35,8 +35,11 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.wrapper {
+.is-open {
     overflow: hidden;
+}
+
+.wrapper {
     min-height: 100%;
     position: relative;
     background-color: #faf8f0;
@@ -50,10 +53,14 @@ body {
         padding-bottom: 230px;
     }
     @include tablets {
-        width: 90%;
+        width: 100%;
     }
     @include phones {
+        //width: 85%;
         padding-bottom: 360px;
+    }
+    @include s-phones {
+        //width: 83%;
     }
 }
 

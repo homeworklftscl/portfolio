@@ -18,7 +18,15 @@ template#slider-info
         .works-slider__info-title
             h3.block-subtitle {{work.title}}
         hr.line-title.line-title_margin
-        .works-slider__info-skills {{work.skills}}
+
+        transition-group(
+            appear
+            :css="false"
+            @before-enter="callback('before-enter')"
+            @after-enter="callback('after-enter')"
+            @enter="enterHandler"
+        )
+            .works-slider__info-skills(:key="work.skills") {{work.skills}}
         .works-slider__info-btn
             a(:href="work.link" target="_blank").works-slider__info-btn-link Посмотреть сайт
                 +icon('link', 'link__svg')
@@ -30,10 +38,15 @@ template#slider-display
 template#slider-buttons
   .works-slider__buttons
     .works-slider__button(@click="slide('prev')")
-        .works-slider__button-img-wrap
+        .wrap
             +icon('arrow_down', 'prev__svg')
-        img(:src="getReqImage('prev').photo", alt="").works-slider__prev-img
+        transition-group(name="slide-down" tag="div").slider__button-img-container
+            .works-slider__button-img-wrap(:key="getReqImage('prev').photo")
+                img(:src="getReqImage('prev').photo", alt="work").works-slider__prev-img
     .works-slider__button(@click="slide('next')")
-        .works-slider__button-img-wrap
+        .wrap
             +icon('arrow_up', 'next__svg')
-        img(:src="getReqImage('next').photo", alt="").works-slider__next-img
+        transition-group(name="slide-up" tag="div").slider__button-img-container
+            .works-slider__button-img-wrap(:key="getReqImage('next').photo")
+                img(:src="getReqImage('next').photo", alt="work").works-slider__next-img
+                
