@@ -1,11 +1,9 @@
-# Чинчук Артем
+# Forest
 
-> Учебный проект Portfolio 'Forest'
+**Loftschool** - Level 3
 
-# Наставник - Юрий Кучма
+**Training Project:** Portfolio
 
-> Начало курса 4.06.2018
+**Description:** Adaptive, BEM, JS, Vue.js, GoogleMaps, Gulp4, WebPack, WebGL
 
-### Сайт
-
-[Forest](https://homeworklftscl.github.io/portfolio/)
+**GitHub Pages:** [Forest](https://homeworklftscl.github.io/portfolio/)
